@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+@font-face {
+    font-family: "font-1";
+    src: url(./assets/Noto_Sans_JP/NotoSansJP-Medium.otf);
+}
+
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+body {
+    font-family: "font-1", serif;
+    background-color: moccasin;
+    background: url(./assets/bg.jpg) no-repeat fixed center/cover;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+h1 {
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 2.5rem;
+color: darkblue;
+text-shadow: 5px 0 0 darkcyan;
+text-align: center;
+font-family: 'Playfair Display', serif;
+}
+
+main {
+background: whitesmoke;
+opacity: 0.95;
+width: 90%;
+height: 500px;
+margin: 10px auto;
+padding: 15px;
+border-radius: 15px;
+box-shadow: 0 2px 12px 5px rgb(199, 241, 238);
+}
+
+.positioning {
+border: 2px solid skyblue;
+padding: 10px;
+margin-top: 20px;
+position: relative;
+}
+
+ h2 {
+     margin: 0px;
+ }
+
+ #circle {
+     height: 60px;
+     width: 60px;
+     background: skyblue;
+     padding: 20px;
+     border-radius: 50%;
+     position: absolute;
+    top: -10px;
+    right: 110px;
+    box-shadow: 0px 0px 15px 5px grey;
+    z-index: 1;
+ }
+
+ #rectangle {
+     height: 15px;
+     width: 25%;
+     background: slateblue;
+     padding: 20px;
+     position: absolute;
+     bottom: 2px;
+     left: 50%;
+     transform: translate(-50%);
+ }
+
+
+ 
+
+
+
