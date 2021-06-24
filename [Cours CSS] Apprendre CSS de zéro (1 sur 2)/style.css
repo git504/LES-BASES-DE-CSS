@@ -39,11 +39,16 @@ border-radius: 15px;
 box-shadow: 0 2px 12px 5px rgb(199, 241, 238);
 }
 
-.positioning {
+.positioning, .flexbox {
 border: 2px solid skyblue;
 padding: 10px;
 margin-top: 20px;
-position: relative;
+}
+
+
+.positioning{
+    position: relative;
+
 }
 
  h2 {
@@ -75,7 +80,22 @@ position: relative;
  }
 
 
- 
+ul {
+    display: flex;
+    padding: 0px;
+    justify-content: space-around;
+}
 
+li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background: turquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
 
 
