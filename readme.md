@@ -1,4 +1,4 @@
-# **Cours** Apprendre CSS de zéro
+# **Cours** : Apprendre le CSS de zéro
 **From Scratch - Développement Web** 
 
 
