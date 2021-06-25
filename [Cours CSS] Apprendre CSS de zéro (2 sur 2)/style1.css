@@ -40,6 +40,26 @@ font-size: 2.4rem;
 
 h1 {
     margin-bottom: 24px;
+    position: relative;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    background: var(--color2);
+    height: 1px;
+    width: 100%;
+    bottom: -14px;
+    transform: translateX(-50%) scaleX(0);
+    left: 50%;
+    animation: h1anim 10s ease-in-out forwards;
+    transform-origin: left;
+}
+
+@keyframes h1anim {
+    to {
+        transform: translateX(-50%) scaleX(1);
+    }
 }
 
 .grid-container {
@@ -92,6 +112,7 @@ h1 {
       display: flex;
       justify-content: space-around;
       margin: 20px 0 30px;
+      perspective: 40px;
   }
 
   input[type="checkbox"] {
@@ -114,6 +135,37 @@ h1 {
       transition: 0.7s;
       user-select: none;
   }
+
+label:first-of-type:hover {
+    animation: label1 1s;
+}
+
+@keyframes label1 {
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+label:nth-child(4):hover {
+    animation: label2 3s infinite linear;
+}
+ /* Ne pas oublier la perspective sur la parent */
+@keyframes label2 {
+    33% {
+transform: translateZ(30px);
+    }
+
+    66% {
+        transform: translateZ(-40px);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
 
 .e-mail {
     text-align: center;
@@ -144,3 +196,110 @@ input[type="text"]:focus {
       color: var(--color2);
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+  button {
+      cursor: pointer;
+      background: var(--color2);
+      border: none;
+      font-size: 1.3rem;
+      padding: 10px 20px;
+      border-radius: 150px;
+      margin: 0 auto;
+      display: block;
+      transition: 0.15s;
+    }
+
+    button:hover {
+        letter-spacing: 3px;
+    }
+
+    button:active {
+        transform: scale(1.2);
+    }
+
+    button:hover + a, a:hover {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+
+    a {
+        color: var(--color2);
+        display: block;
+        text-align: center;
+        margin: 14px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.3s;
+    }
+
+    a:visited {
+        color: var(--color1);
+    }
+
+img {
+    height: 40px;
+    position: absolute;
+    filter: drop-shadow(0px 6px 3px var(--color1));
+    z-index: -1;
+    animation: spaceship 60s infinite linear;
+}
+
+@keyframes spaceship {
+    0% {
+      top: 2%;
+      left: 2%;
+      transform: rotate(90deg);
+    }
+    10% {
+      top: 6%;
+      left: 30%;
+      transform: rotate(95deg);
+    }
+    20% {
+      top: 9%;
+      left: 60%;
+      transform: rotate(60deg);
+    }
+    30% {
+      top: 0%;
+      left: 80%;
+      transform: rotate(90deg);
+    }
+    40% {
+      top: 20%;
+      left: 120%;
+      transform: rotate(110deg);
+    }
+    50% {
+      top: 50%;
+      left: 80%;
+      transform: rotate(323deg);
+    }
+    60% {
+      top: 90%;
+      left: 90%;
+      transform: rotate(256deg);
+    }
+    70% {
+      top: 110%;
+      left: 50%;
+      transform: rotate(237deg);
+    }
+    80% {
+      top: 85%;
+      left: 30%;
+      transform: rotate(323deg);
+    }
+    90% {
+      top: 50%;
+      left: 15%;
+      transform: rotate(350deg);
+    }
+    100% {
+      top: 2%;
+      left: 2%;
+      transform: rotate(90deg);
+    }
+  }
+  
